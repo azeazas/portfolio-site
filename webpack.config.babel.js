@@ -49,11 +49,14 @@ export default {
           .concat(['babel']),
       },
 
+      // CSS
+      { test: /\.css$/, loader:'style!css!'},
+
       // LESS
       { test: /\.less$/, loader: 'style!css!less' },
 
       // images
-      { test: /\.(jpeg|png|jpg)$/, loader: `file?name=${staticFolderWithSlash}/[name].[ext]` },
+      { test: /\.(jpeg|png|jpg|svg)$/, loader: `file?name=${staticFolderWithSlash}/[name].[ext]` },
     ],
   },
   plugins: [
